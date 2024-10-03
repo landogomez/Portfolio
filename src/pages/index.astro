@@ -8,12 +8,13 @@ import LinkedInIcon from '../components/icons/LinkedIn.astro'
 import GitHubIcon from '../components/icons/GitHub.astro'
 import MailIcon from '../components/icons/Mail.astro'
 import CodeIcon from '../components/icons/Code.astro'
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Portfolio de Orlando - Desarrollador y Programador web actualmente estudiando ingenieria"
 		description="Contrata a Orlando para crear tu aplicacion web o movil">
 	<main>
-		<SectionContainer class="py-44 pb-24">
+		<SectionContainer class="py-44 pb-32">
 			<img
 				class="rounded-full size-12 mb-4" 
 				src="https://images.app.goo.gl/jPiqfRPQew7w8jzN9" 
@@ -57,11 +58,13 @@ import CodeIcon from '../components/icons/Code.astro'
 		</SectionContainer>
 		
 		<SectionContainer>
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-7" />
 				Proyectos
 	
 			</h2>
+
+			<Projects />
 
 		</SectionContainer>
 	</main>
