@@ -7,47 +7,50 @@ import SASS from './icons/SASS.astro'
 import C from './icons/C.astro'
 import CSH from './icons/CSH.astro'
 import Ts from './icons/TS.astro'
+import LinkButton from "./LinkButton.astro"
+import GitHub from "./icons/GitHub.astro"
+import WWW from './icons/WW.astro'
 
 const TAGS = {
     TAILWIND: {
-        name: 'Tailwind CSS',
-        class: 'bg-[#003159] text-[white]',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Tailwind,
     },
     HTML: {
-        name: 'HTML',
-        class: 'bg-[#ff6e38] text-white',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Html,
     },
     JS:{
-        name: 'JavaScript',
-        class: 'bg-black text-[#fef977]',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: JS,
     },
     REACT: {
-        name: 'React',
-        class: 'bg-[#133c44] text-[white]',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Reac,
 
     },
     SASS: {
-        name: 'SASS',
-        class: 'bg-[black] text-[#ffc1e0]',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: SASS,
     },
     C: {
         name: '',
-        class: 'bg-[#2f3afd] text-[white]',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: C,
     },
     CSHARP: {
-        name: 'C#',
-        class: 'bg-[#6f44b5] text-white',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: CSH,
     },
     TS: {
-        name: 'TypeScript',
-        class: 'bg-[#0f3363] text-white',
+        name: '',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Ts,
     }
 
@@ -66,24 +69,36 @@ const PROJECTS = [
     }
 ]
 ---
+<section class="flex flex-col gap-y-16">
+    {
+        PROJECTS.map(({image ,title, description, tags, link, github}) => (
+            <article>
+                <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+                <p class="text-lg mb-4 text-pretty">{description}</p>
+                <ul class="flex gap-x-2 flex-row mb-2">
+                    {
+                    tags.map(tag => (
+                        <li>
+                            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                                <tag.icon class="size-4"/>
+                                {tag.name}
+                            </span>
+                        </li>
+                    ))}
+                </ul>
+                <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+                <footer class="flex gap-x-4 mt-4">
+                    {github && <LinkButton href={github}>
+                        <GitHub class="size-6"/>
+                        Check full code here
+                    </LinkButton>}
 
-{
-    PROJECTS.map(({image ,title, description, tags}) => (
-        <article>
-            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row mb-2">
-                {
-                tags.map(tag => (
-                    <li>
-                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
-                            <tag.icon class="size-4"/>
-                            {tag.name}
-                        </span>
-                    </li>
-                ))}
-            </ul>
-            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
-        </article>
-    ))
-}
+                    <LinkButton href={link}>
+                        <WWW />
+                        Go to Website
+                    </LinkButton>
+                </footer>
+            </article>
+        ))
+    }
+</section>
