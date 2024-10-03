@@ -17,8 +17,8 @@ import Projects from '../components/Projects.astro';
 	<main>
 		<SectionContainer id="about" class="py-44 pb-32">
 			<img
-				class="rounded-full size-12 mb-4" 
-				src="https://images.app.goo.gl/jPiqfRPQew7w8jzN9" 
+				class="rounded-full size-14 mb-4" 
+				src='public/img/perfil2.jpeg' 
 				alt="george photo" 
 			/>
 			<h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 
@@ -41,17 +41,17 @@ import Projects from '../components/Projects.astro';
 			</h2>
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
-				<Socials >
+				<Socials href="https://www.linkedin.com/in/orlando-gomez-b0a393330/">
 					<LinkedInIcon class="size-4 md:size-6"/>
 					LinkedIn
 				</Socials>
 					
-				<Socials>
+				<Socials href="https://github.com/landogomez">
 					<GitHubIcon class="size-4 md:size-6"/>
 					GitHub
 				</Socials>
 
-				<Socials>
+				<Socials id="contact">
 					<MailIcon class="size-4 md:size-6"/>
 					ogomez.isc@gmail.com
 				</Socials>
@@ -61,7 +61,7 @@ import Projects from '../components/Projects.astro';
 		<SectionContainer id="projects">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-7" />
-				Proyectos
+				Projects
 	
 			</h2>
 

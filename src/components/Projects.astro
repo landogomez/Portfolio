@@ -1,5 +1,12 @@
 ---
 import Tailwind from "./icons/Tailwind.astro"
+import Html from './icons/HT.astro'
+import JS from './icons/JS.astro'
+import Reac from './icons/Reac.astro'
+import SASS from './icons/SASS.astro'
+import C from './icons/C.astro'
+import CSH from './icons/CSH.astro'
+import Ts from './icons/TS.astro'
 
 const TAGS = {
     TAILWIND: {
@@ -9,7 +16,39 @@ const TAGS = {
     },
     HTML: {
         name: 'HTML',
-        class: 'bg-white text-[#73bcf6]',
+        class: 'bg-[#ff6e38] text-white',
+        icon: Html,
+    },
+    JS:{
+        name: 'JavaScript',
+        class: 'bg-black text-[#fef977]',
+        icon: JS,
+    },
+    REACT: {
+        name: 'React',
+        class: 'bg-[#133c44] text-[white]',
+        icon: Reac,
+
+    },
+    SASS: {
+        name: 'SASS',
+        class: 'bg-[black] text-[#ffc1e0]',
+        icon: SASS,
+    },
+    C: {
+        name: '',
+        class: 'bg-[#2f3afd] text-[white]',
+        icon: C,
+    },
+    CSHARP: {
+        name: 'C#',
+        class: 'bg-[#6f44b5] text-white',
+        icon: CSH,
+    },
+    TS: {
+        name: 'TypeScript',
+        class: 'bg-[#0f3363] text-white',
+        icon: Ts,
     }
 
 }
@@ -22,7 +61,7 @@ const PROJECTS = [
         link: '#',
         github: '#',
         image: 'https://via.placeholder.com/300x200',
-        tags: [TAGS.TAILWIND]
+        tags: [TAGS.HTML,TAGS.TAILWIND, TAGS.JS, TAGS.REACT, TAGS.SASS, TAGS.C, TAGS.CSHARP, TAGS.TS]
 
     }
 ]
