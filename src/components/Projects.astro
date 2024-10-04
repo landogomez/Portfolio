@@ -10,48 +10,54 @@ import Ts from './icons/TS.astro'
 import LinkButton from "./LinkButton.astro"
 import GitHub from "./icons/GitHub.astro"
 import WWW from './icons/WW.astro'
+import Bootstrap from './icons/Boot.astro'
 
 const TAGS = {
     TAILWIND: {
-        name: '',
+        name: 'Tailwind CSS',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Tailwind,
     },
     HTML: {
-        name: '',
+        name: 'HTML',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Html,
     },
     JS:{
-        name: '',
+        name: 'JavaScript',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: JS,
     },
     REACT: {
-        name: '',
+        name: 'React',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Reac,
 
     },
     SASS: {
-        name: '',
+        name: 'SASS',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: SASS,
     },
     C: {
-        name: '',
+        name: 'C Language',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: C,
     },
     CSHARP: {
-        name: '',
+        name: 'C#',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: CSH,
     },
     TS: {
-        name: '',
+        name: 'TypeScript',
         class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
         icon: Ts,
+    },
+    BS: {
+        name: 'Bootstrap',
+        class: 'rounded-full border border-gray-800 bg-gray-950  text-gray-300 bg-gradient-to-t from-[#fff] to-[#8678f9] bg-clip-text text-transparent',
+        icon: Bootstrap,
     }
 
 }
@@ -59,13 +65,39 @@ const TAGS = {
 
 const PROJECTS = [
     {
-        title: 'Project 1',
-        description: 'Loremipusm   ',
+        title: 'GUITARLA',
+        description: 'Guitarla is an innovative e-commerce platform designed for guitar enthusiasts and musicians. Built using React, JavaScript, HTML, and Bootstrap, Guitarla offers a seamless shopping experience for users looking to purchase guitars, accessories, and related products.',
         link: '#',
-        github: '#',
-        image: 'https://via.placeholder.com/300x200',
-        tags: [TAGS.HTML,TAGS.TAILWIND, TAGS.JS, TAGS.REACT, TAGS.SASS, TAGS.C, TAGS.CSHARP, TAGS.TS]
+        github: 'https://github.com/landogomez/guitarla',
+        image: '/public/img/guitarla1 (1).webp',
+        tags: [TAGS.HTML,TAGS.JS, TAGS.BS,TAGS.REACT]
 
+    },
+    {
+        title: 'CALORIES TRACKER',
+        description: 'Calorie Tracker is a user-friendly web application designed to help users monitor their daily calorie intake and expenditure. Built with React, TypeScript, HTML, and styled using Tailwind CSS, this application allows users to input their meals or activities along with their corresponding calorie counts. As users add items, the app dynamically displays the total calories consumed and burned, providing a clear overview of their daily caloric balance.',
+        link: '',
+        github: 'https://github.com/landogomez/CaloriesTracker',
+        image: 'public/img/calories.webp',
+        tags: [TAGS.HTML,TAGS.TS, TAGS.REACT, TAGS.TAILWIND]
+    },
+    {
+        title: 'TIPS APP',
+        description: 'Tip Calculator is a web application designed for servers to easily calculate tips based on the meals served. Built with React, TypeScript, HTML, and styled using Tailwind CSS, this application allows users to add individual dishes along with their prices and specify the percentage of tip they wish to leave. The app then computes the total amount consumed, including the tip, providing a clear summary for the user.',
+        link: '',
+        github: 'https://github.com/landogomez/calculadora-propinas',
+        image: 'public/img/tipsapp.webp',
+        tags: [TAGS.HTML,TAGS.TS, TAGS.REACT, TAGS.TAILWIND]
+
+    },
+    {
+
+        title: 'TECH & EDM FESTIVAL',
+        description: 'This web page is designed to showcase an electronic music festival, providing essential information and an engaging user experience. Built with HTML, SASS, and JavaScript, the page features a modern and vibrant design that reflects the energetic atmosphere of electronic music.',
+        link: '',
+        github: 'https://github.com/landogomez/festivalmusica',
+        image: 'public/img/tech.webp',
+        tags: [TAGS.HTML,TAGS.SASS, TAGS.JS]
     }
 ]
 ---
