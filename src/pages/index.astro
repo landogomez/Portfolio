@@ -17,7 +17,7 @@ import AboutMe from '../components/AboutMe.astro'
 <Layout title="Portfolio de Orlando - Desarrollador y Programador web actualmente estudiando ingenieria"
 		description="Contrata a Orlando para crear tu aplicacion web o movil">
 	<main>
-		<SectionContainer id="about" class="py-44 pb-32">
+		<SectionContainer id="home" class="py-44 pb-32">
 			<img
 				class="rounded-full size-14 mb-4" 
 				src='public/img/perfil2.jpeg' 
@@ -36,10 +36,9 @@ import AboutMe from '../components/AboutMe.astro'
 				</a>
 			</h1>
 
-			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">Software Enginner student. From Mexico City Mexico ...
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, unde, architecto 
-				ullam fugit ut, at illum optio sint recusandae ducimus sunt. Eligendi a perspiciatis atque. 
-				Commodi dolore nihil minima sapiente?
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">I am a Computer Systems Engineering student, 
+				currently pursuing a Bachelor's Degree at the Escuela Superior de Cómputo, 
+				part of the Instituto Politécnico Nacional, in Mexico City, Mexico.
 			</h2>
 
 			<nav class="flex gap-4 mt-8 flex-wrap">
@@ -71,15 +70,13 @@ import AboutMe from '../components/AboutMe.astro'
 
 		</SectionContainer>
 
-		<SectionContainer id="projects">
+		<SectionContainer id="about">
 			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
 				<AboutIcon class="size-7" />
 				About me
 	
 			</h2>
-
-			<AboutMe />
-
+			<AboutMe id="about"/>
 
 		</SectionContainer>
 
